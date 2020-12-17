@@ -1,0 +1,28 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  margin: 0px;
+}
+header {
+  font-size: 30px;
+  background-color: black;
+  padding: 2rem;
+  margin: auto auto 2rem;
+  color: white;
+}
+
+input {
+  padding: 2rem;
+  width: 80%;
+}
+
+footer {
+  font-size: 20px;
+  margin-top: 10rem;
+}
+
+footer a {
+  text-decoration: none;
+}
