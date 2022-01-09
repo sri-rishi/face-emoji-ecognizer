@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import { useState } from "react";
 
-var emojiDictionary = {
+const emojiDictionary = {
   "🐱": "cat face",
   "🐶": "dog face",
   "🐯": "tiger face",
@@ -13,15 +13,15 @@ var emojiDictionary = {
   "🐰": "rabbit face"
 };
 
-var emojisWeKnow = Object.keys(emojiDictionary);
+const emojisWeKnow = Object.keys(emojiDictionary);
 
 export default function App() {
-  var [meaning, setMeaning] = useState("");
+  const [meaning, setMeaning] = useState("");
 
   const emojiInputHandeler = (event) => {
-    var userInput = event.target.value;
+    const userInput = event.target.value;
 
-    var meaning = emojiDictionary[userInput];
+    let meaning = emojiDictionary[userInput];
 
     if (meaning === undefined) {
       meaning = "we dont know about it";
@@ -30,7 +30,7 @@ export default function App() {
   };
 
   const emojiClickHandeler = (emoji) => {
-    var meaning = emojiDictionary[emoji];
+    let meaning = emojiDictionary[emoji];
     setMeaning(meaning);
   };
 
@@ -47,7 +47,7 @@ export default function App() {
 
       <h3>Face emojis we know </h3>
 
-      {emojisWeKnow.map(function (emoji) {
+      {emojisWeKnow.map((emoji) => {
         return (
           <span
             style={{ fontSize: "4rem", padding: "0.5rem", cursor: "pointer" }}
