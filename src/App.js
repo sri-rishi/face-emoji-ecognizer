@@ -29,10 +29,10 @@ export default function App() {
     setMeaning(meaning);
   }
 
-  function emojiClickHandeler(emoji) {
+  const emojiClickHandeler = emoji => {
     var meaning = emojiDictionary[emoji];
     setMeaning(meaning);
-  }
+  };
 
   return (
     <div className="App">
