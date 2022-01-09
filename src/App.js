@@ -18,7 +18,7 @@ var emojisWeKnow = Object.keys(emojiDictionary);
 export default function App() {
   var [meaning, setMeaning] = useState("");
 
-  function emojiInputHandeler(event) {
+  const emojiInputHandeler = (event) => {
     var userInput = event.target.value;
 
     var meaning = emojiDictionary[userInput];
@@ -27,9 +27,9 @@ export default function App() {
       meaning = "we dont know about it";
     }
     setMeaning(meaning);
-  }
+  };
 
-  const emojiClickHandeler = emoji => {
+  const emojiClickHandeler = (emoji) => {
     var meaning = emojiDictionary[emoji];
     setMeaning(meaning);
   };
